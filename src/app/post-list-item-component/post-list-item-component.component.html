@@ -1,0 +1,12 @@
+<div [ngClass]="{'list-group-item': true,
+'list-group-item-success': loveIts >0,
+'list-group-item-danger': loveIts <0}">
+  <h2>{{title}} <span style="float:right; font-size: 70%">{{created_at |date:'medium'}}</span> </h2>
+  <p>{{content}} </p>
+  
+  <p> Number of like : {{loveIts}}
+    <button type="button" (click)="doLoveIt()" class="btn btn-primary">love it</button>
+    <button type="button" (click)="doDislikeIt()" class="btn btn-danger">don't love it</button>
+</p>
+
+</div>
